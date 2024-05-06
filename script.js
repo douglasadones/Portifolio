@@ -9,17 +9,25 @@ window.addEventListener("DOMContentLoaded", () => {
     allProjectButtons.forEach(element => {
         console.log(element.children);
         element.addEventListener("click", () => {
-
+            
             let projectContent = element.lastElementChild;
 
             if (projectContent.style.display === "none") {
-                projectContent.style.display = "block"
+
+
+                document.querySelector(".row").style.flexDirection = "column";
+
+                projectContent.style.display = "block";
+
             } else {
-                projectContent.style.display = "none"
+
+                document.querySelector(".row").style.flexDirection = "row";
+
+                projectContent.style.display = "none";
+
+                
+
             }
-            
         })
     });
-})
-
-
+});
