@@ -192,6 +192,12 @@ footer i {
     font-size: 30px;
     color: #111;
     padding: 0 10px;
+    transition: all 200ms;
+}
+
+footer i:hover {
+    filter: drop-shadow(0 0 10px rgb(255, 255, 255));
+    transform: scale(1.05);
 }
 
 footer .separator {
