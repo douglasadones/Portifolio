@@ -5,9 +5,7 @@
 }
 
 body {
-    background-color: #0000ff25;
-    background: linear-gradient(170deg, rgba(0, 0, 255, 0.377), rgba(0, 0, 0, 0.301));
-    min-height: 100%;
+    background-color: rgba(0, 0, 255, 0.377);
 }
 
 main {
@@ -17,7 +15,7 @@ main {
     align-items: center;
     background-color: white;
     border-radius: 20px;
-    max-width: 80%;
+    max-width: 90%;
     max-height: 70%;
     min-height: 500px;
     margin: 5% auto;
@@ -79,9 +77,9 @@ main {
 .project {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
-    min-width: 120px;
+    min-width: 190px;
     border: 1px solid #cccccc;
     padding: 7px;
     border-radius: 2em;
@@ -111,7 +109,9 @@ svg {
 
 }
 
-button {
+.project a {
+    text-decoration: none;
+    color: black;
     cursor: pointer;
     margin: 3px;
     padding: 10px;
@@ -120,13 +120,13 @@ button {
     display: flex;
     justify-content:  space-around;
     align-items: center;
-    width: 100px;
+    width: 120px;
     height: 30px;
     background-color: rgba(0, 0, 255, 0.349);
     border-radius: 10px;
 }
 
-button:hover {
+.project a:hover {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.555);;
 }
 
@@ -152,13 +152,12 @@ button:hover {
     font-size: 25px;
 }
 
-/* .project-content {
+.project-content {
     display: none;
-} */
+}
 
 .project img {
     border-radius: 1em;
-    width: 260px;
     margin: 5px 20px;
 }
 
