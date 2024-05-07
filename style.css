@@ -16,6 +16,7 @@ main {
     background-color: white;
     border-radius: 20px;
     max-width: 90%;
+    min-width: fit-content;
     max-height: 70%;
     min-height: 500px;
     margin: 5% auto;
@@ -47,6 +48,7 @@ main {
 }
 
 .row {
+    margin: 0 auto;
     padding: 20px;
     width: 100%;
     display: flex;
@@ -67,11 +69,20 @@ main {
     flex-direction: column;
     margin-bottom: 10px;
     margin: 10px 0;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 255, 0.151);
+    border-radius: 1em;
 }
 
 .title img {
     margin: 5px auto;
     height: 30px;
+}
+
+.project-list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
 }
 
 .project {
@@ -118,12 +129,12 @@ svg {
     border-style: none;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.555);
     display: flex;
-    justify-content:  space-around;
+    justify-content: space-around;
     align-items: center;
     width: 120px;
     height: 30px;
     background-color: rgba(0, 0, 255, 0.349);
-    border-radius: 10px;
+    border-radius: 20px;
 }
 
 .project a:hover {
@@ -161,8 +172,28 @@ svg {
     margin: 5px 20px;
 }
 
-footer i {
-    font-size: 25px;
-    color: #222;
+footer {
+    display: flex;
+    flex-direction: row;
 }
 
+footer i {
+    font-size: 30px;
+    color: #222;
+    padding: 0 10px;
+}
+
+footer .separator {
+    width: 1px;
+    height: 30px;
+    background-color: rgba(7, 7, 41, 0.349);
+    z-index: 30;
+}
+
+@media screen and (max-width: 900px) {
+    
+    .row{
+        display: block;
+    }
+
+}
