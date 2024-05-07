@@ -6,6 +6,8 @@
 
 body {
     background-color: rgba(0, 0, 255, 0.377);
+    background-image: url("./assets/imagens/bg.png");
+    background-position: center;
 }
 
 main {
@@ -20,11 +22,18 @@ main {
     max-height: 70%;
     min-height: 500px;
     margin: 5% auto;
-    padding: 20px
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.486);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.301);
+}
+
+hr {
+    border-color: rgba(196, 196, 196, 0.664);
 }
 
 #perfil-screenshot {
-    background-image: url("./assets/imagens/logo-portifolio.jpeg");
+    background-image: url("https://avatars.githubusercontent.com/u/95550011?s=400&u=5b2cf333b41073f1ed33ba0cc822216ec6b27c41&v=4");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -72,6 +81,7 @@ main {
     padding: 10px 0;
     background-color: rgba(0, 0, 255, 0.151);
     border-radius: 1em;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
 }
 
 .title img {
@@ -86,17 +96,19 @@ main {
 }
 
 .project {
+    background-color: #302de24b;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     min-width: 190px;
-    border: 1px solid #cccccc;
+    border: 1px solid #0000003d;
     padding: 7px;
     border-radius: 2em;
     margin: 7px auto;
     cursor: pointer;
     transition: all 300ms;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
 }
 
 .project-header {
@@ -106,18 +118,17 @@ main {
     width: 100%;
 }
 
-svg {
-    width: 1em;
-}
-
 .project-content {
     cursor: default;
+}
+
+svg {
+    width: 1em;
 }
 
 .project-content .explorar {
     display: flex;
     justify-content: center;
-
 }
 
 .project a {
