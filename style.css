@@ -17,7 +17,7 @@ main {
     align-items: center;
     background-color: white;
     border-radius: 20px;
-    max-width: 90%;
+    max-width: 70%;
     min-width: fit-content;
     max-height: 70%;
     min-height: 500px;
@@ -56,37 +56,14 @@ hr {
     font-size: 18px;
 }
 
-.row {
+.colunaDeProjetos {
     margin: 0 auto;
     padding: 20px;
-    width: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
     flex-wrap: wrap;
     text-align: center;
-}
-
-.tecnologia {
-    display: flex;
-    flex-direction: column;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    margin-bottom: 10px;
-    margin: 10px 0;
-    padding: 10px 0;
-    background-color: rgba(0, 0, 255, 0.151);
-    border-radius: 1em;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.301);
-}
-
-.title img {
-    margin: 5px auto;
-    height: 30px;
 }
 
 .project-list {
@@ -97,8 +74,6 @@ hr {
 
 .project {
     background-color: #302de24b;
-    display: flex;
-    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     min-width: 190px;
@@ -183,34 +158,27 @@ svg {
     margin: 5px 20px;
 }
 
-footer {
+.social {
+    padding-top: 1rem;
     display: flex;
     flex-direction: row;
 }
 
-footer i {
+.social i {
     font-size: 30px;
     color: #111;
     padding: 0 10px;
     transition: all 200ms;
 }
 
-footer i:hover {
+.social i:hover {
     filter: drop-shadow(0 0 10px rgb(255, 255, 255));
     transform: scale(1.05);
 }
 
-footer .separator {
+.social .separator {
     width: 1px;
     height: 30px;
     background-color: rgba(7, 7, 41, 0.349);
     z-index: 30;
-}
-
-@media screen and (max-width: 900px) {
-    
-    .row{
-        display: block;
-    }
-
 }
