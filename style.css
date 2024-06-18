@@ -3,6 +3,7 @@
     --shader1: #405155;
     --shader2: #405155a6;
     --light-white: rgba(255, 255, 255, 0.884);
+    --separators-color: rgba(196, 196, 196, 0.664);
 }
 
 * {
@@ -29,7 +30,7 @@ main {
 }
 
 hr {
-    border-color: rgba(196, 196, 196, 0.664);
+    border-color: var(--separators-color);
 }
 
 #perfil-screenshot {
@@ -63,7 +64,7 @@ h2 {
 }
 
 .colunaDeProjetos {
-    margin: 0 auto;
+    width: 100%;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -77,10 +78,9 @@ h2 {
     background-color: var(--light-white);
     justify-content: space-around;
     align-items: center;
-    width: 300px;
+    width: 50%;
     min-width: 50%;
     min-height: 3rem;
-    min-width: 190px;
     border: 1px solid #0000003d;
     padding: 7px;
     border-radius: 2em;
@@ -110,6 +110,7 @@ h2 {
 .project-content img {
     object-fit: cover;
     width: 100%;
+    max-height: 70vh;
 }
 
 svg {
@@ -192,6 +193,12 @@ svg {
 .social .separator {
     width: 1px;
     height: 30px;
-    background-color: rgba(7, 7, 41, 0.349);
+    background-color: var(--separators-color);
     z-index: 30;
+}
+
+@media (max-width: 900px) {
+    .project {
+        width: 100%;
+    }
 }
