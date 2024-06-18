@@ -23,16 +23,21 @@ let showOrHideContent = function () {
     allProjectButtons.forEach(element => {
 
         element.addEventListener("click", () => {
-            let projectContent = element.lastElementChild;
 
-            if (projectContent.style.display === "block") {
+            let buttonProjectBody = element.children;
+            let buttonProjectContent = element.children[1];
+            let buttonProjectFooter = element.children[buttonProjectBody.length-1];
+            
+            if (buttonProjectContent.style.display === "block") {
 
-                projectContent.style.display = "none";
+                buttonProjectContent.style.display = "none";
+                buttonProjectFooter.style.display = "none";
 
             } else {
-                
+
                 hiddingAllContent()
-                projectContent.style.display = "block";
+                buttonProjectContent.style.display = "block";
+                buttonProjectFooter.style.display = "block";
 
                 element.scrollIntoView();
             }
