@@ -69,6 +69,7 @@ h2 {
     padding: 20px;
     display: flex;
     flex-direction: column;
+    margin: 0 auto;
 }
 
 .project {
@@ -221,5 +222,12 @@ svg {
 @media (max-width: 1500px) {
     .project {
         width: 70%;
+    }
+}
+
+
+@media (max-width: 450px) {
+    body {
+        width: 100%;
     }
 }
