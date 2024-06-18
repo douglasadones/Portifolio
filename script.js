@@ -30,13 +30,21 @@ let showOrHideContent = function () {
                 projectContent.style.display = "none";
 
             } else {
-
+                
+                hiddingAllContent()
                 projectContent.style.display = "block";
 
                 element.scrollIntoView();
             }
         })
     });
+}
+
+
+let hiddingAllContent = function () {
+    allProjectButtons.forEach(element => {
+        element.lastElementChild.style.display = "none";
+    })
 }
 
 

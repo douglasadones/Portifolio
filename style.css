@@ -2,7 +2,7 @@
     --black: black;
     --shader1: #405155;
     --shader2: #405155a6;
-    --white: rgba(255, 255, 255, 0.884);
+    --light-white: rgba(255, 255, 255, 0.884);
 }
 
 * {
@@ -46,7 +46,7 @@ hr {
 }
 
 .sobre {
-    color: var(--white);
+    color: var(--light-white);
 }
 
 .sobre h1,
@@ -74,7 +74,7 @@ h2 {
 .project {
     display: flex;
     flex-direction: column;
-    background-color: var(--white);
+    background-color: var(--light-white);
     justify-content: space-around;
     align-items: center;
     width: 300px;
@@ -105,6 +105,11 @@ h2 {
 
 .project-content {
     cursor: default;
+}
+
+.project-content img {
+    object-fit: cover;
+    width: 100%;
 }
 
 svg {
@@ -141,7 +146,6 @@ svg {
 
 .project a:hover {
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.555);
-    ;
 }
 
 .project:hover {
@@ -164,19 +168,18 @@ svg {
 
 .project img {
     border-radius: 1em;
-    margin: 5px 20px;
+    margin: 5px 0;
 }
 
 .social {
     padding-top: 1.4rem;
     display: flex;
-
     flex-direction: row;
 }
 
 .social i {
     font-size: 30px;
-    color: var(--white);
+    color: var(--light-white);
     padding: 0 32px;
     transition: all 200ms;
 }
