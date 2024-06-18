@@ -174,7 +174,10 @@ svg {
 
 .project-footer {
     display: none;
+    width: 100%;
+    justify-content: space-evenly;
 }
+
 
 .social {
     padding-top: 1.4rem;

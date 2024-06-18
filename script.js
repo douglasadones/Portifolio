@@ -3,7 +3,6 @@ let allProjectButtons = document.querySelectorAll("div.project");
 
 window.addEventListener("DOMContentLoaded", () => {
     // transformWidth();
-    putExploreSVG();
     showOrHideContent();
 });
 
@@ -36,7 +35,7 @@ let showOrHideContent = function () {
             } else {
                 hiddingAllContent()
                 buttonProjectBody.style.display = "block";
-                buttonProjectFooter.style.display = "block";
+                buttonProjectFooter.style.display = "flex";
 
                 element.scrollIntoView();
             }
@@ -48,15 +47,11 @@ let showOrHideContent = function () {
 let hiddingAllContent = function () {
 
     allProjectButtons.forEach(element => {
+
+        // content
         element.children[1].style.display = "none";
+
+        // footer
         element.children[2].style.display = "none";
-    })
-}
-
-
-let putExploreSVG = function () {
-    allProjectButtons.forEach(element => {
-        // Adiciona icone de "Código" e Ícone no botão
-        element.lastElementChild.lastElementChild.getElementsByTagName("a")[0].innerHTML += "<p>Código</p><i class='bx bx-code-alt'></i>"
     })
 }
