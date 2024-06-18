@@ -15,6 +15,7 @@
 body {
     background-color: var(--shader1);
     background-position: center;
+    width: auto;
 }
 
 main {
@@ -68,8 +69,6 @@ h2 {
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
 }
 
 .project {
@@ -117,12 +116,12 @@ svg {
     width: 1em;
 }
 
-.project-body .explorar {
+.project-body .codigo {
     display: flex;
     justify-content: center;
 }
 
-.explorar a {
+.codigo a {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -160,7 +159,7 @@ svg {
 }
 
 .project i {
-    font-size: 25px;
+    font-size: 1em;
 }
 
 .project-body {
@@ -183,9 +182,9 @@ svg {
 }
 
 .social i {
-    font-size: 30px;
+    font-size: 2em;
     color: var(--light-white);
-    padding: 0 32px;
+    padding: 0 1em;
     transition: all 200ms;
 }
 
@@ -196,9 +195,8 @@ svg {
 
 .social .separator {
     width: 1px;
-    height: 30px;
+    height: 2em;
     background-color: var(--separators-color);
-    z-index: 30;
 }
 
 @media (max-width: 700px) {
@@ -208,7 +206,7 @@ svg {
 
     .colunaDeProjetos {
         width: 150%;
-        margin: 0 40px;
+        margin: 0 30px;
     }
 
 }
