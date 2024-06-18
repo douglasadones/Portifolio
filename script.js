@@ -24,19 +24,18 @@ let showOrHideContent = function () {
 
         element.addEventListener("click", () => {
 
-            let buttonProjectBody = element.children;
-            let buttonProjectContent = element.children[1];
-            let buttonProjectFooter = element.children[buttonProjectBody.length-1];
-            
-            if (buttonProjectContent.style.display === "block") {
+            let buttonProjectAllChildren = element.children;
+            let buttonProjectBody = element.children[1];
+            let buttonProjectFooter = element.children[buttonProjectAllChildren.length - 1];
 
-                buttonProjectContent.style.display = "none";
+            if (buttonProjectBody.style.display === "block") {
+
+                buttonProjectBody.style.display = "none";
                 buttonProjectFooter.style.display = "none";
 
             } else {
-
                 hiddingAllContent()
-                buttonProjectContent.style.display = "block";
+                buttonProjectBody.style.display = "block";
                 buttonProjectFooter.style.display = "block";
 
                 element.scrollIntoView();
@@ -47,16 +46,17 @@ let showOrHideContent = function () {
 
 
 let hiddingAllContent = function () {
+
     allProjectButtons.forEach(element => {
-        element.lastElementChild.style.display = "none";
+        element.children[1].style.display = "none";
+        element.children[2].style.display = "none";
     })
 }
 
 
 let putExploreSVG = function () {
     allProjectButtons.forEach(element => {
-
         // Adiciona icone de "Código" e Ícone no botão
-        element.lastElementChild.lastElementChild.getElementsByTagName("a")[0].innerHTML += "<p>Código</p> <i class='bx bx-code-alt'></i>"
+        element.lastElementChild.lastElementChild.getElementsByTagName("a")[0].innerHTML += "<p>Código</p><i class='bx bx-code-alt'></i>"
     })
 }
