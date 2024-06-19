@@ -176,8 +176,8 @@ svg {
     display: none;
     width: 100%;
     justify-content: space-evenly;
+    cursor: default;
 }
-
 
 .social {
     padding-top: 1.4rem;

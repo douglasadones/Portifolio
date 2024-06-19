@@ -2,41 +2,37 @@ let allProjectButtons = document.querySelectorAll("div.project");
 
 
 window.addEventListener("DOMContentLoaded", () => {
-    // transformWidth();
     showOrHideContent();
 });
 
-
-
-let transformWidth = function () {
-    allProjectButtons.forEach(element => {
-
-        element.addEventListener("click", () => {
-            element.style.width = "100%";
-        })
-    })
-}
-
-
 let showOrHideContent = function () {
+
     allProjectButtons.forEach(element => {
+        let buttonProjectAllChildren = element.children;
+        let buttonProjectHeader = element.children[0];
+        let buttonProjectBody = element.children[1];
+        let buttonProjectFooter = element.children[buttonProjectAllChildren.length - 1];
 
-        element.addEventListener("click", () => {
-
-            let buttonProjectAllChildren = element.children;
-            let buttonProjectBody = element.children[1];
-            let buttonProjectFooter = element.children[buttonProjectAllChildren.length - 1];
-
+        buttonProjectHeader.addEventListener("click", () => {
             if (buttonProjectBody.style.display === "block") {
-
                 buttonProjectBody.style.display = "none";
                 buttonProjectFooter.style.display = "none";
-
             } else {
                 hiddingAllContent()
                 buttonProjectBody.style.display = "block";
                 buttonProjectFooter.style.display = "flex";
+                element.scrollIntoView();
+            }
+        })
 
+        buttonProjectBody.addEventListener("click", () => {
+            if (buttonProjectBody.style.display === "block") {
+                buttonProjectBody.style.display = "none";
+                buttonProjectFooter.style.display = "none";
+            } else {
+                hiddingAllContent()
+                buttonProjectBody.style.display = "block";
+                buttonProjectFooter.style.display = "flex";
                 element.scrollIntoView();
             }
         })
@@ -45,9 +41,7 @@ let showOrHideContent = function () {
 
 
 let hiddingAllContent = function () {
-
     allProjectButtons.forEach(element => {
-
         // content
         element.children[1].style.display = "none";
 
